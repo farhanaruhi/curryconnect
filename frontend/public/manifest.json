@@ -1,0 +1,16 @@
+{
+  "name": "CurryConnect - Smart Curry Finder",
+  "short_name": "CurryConnect",
+  "description": "Discover nearby homemade curries with ML-powered recommendations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+@import "tailwindcss";
+
+@theme {
+  /* Set custom font families */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* Custom Food-inspired Color Theme (Warm Orange, Green, Cream, Charcoal) */
+  --color-brand-50: #fff9f2;
+  --color-brand-100: #ffe8d1;
+  --color-brand-200: #ffd1a4;
+  --color-brand-500: #f97316; /* Warm Orange */
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-900: #431407;
+  
+  --color-sharing-50: #f0fdf4;
+  --color-sharing-100: #dcfce7;
+  --color-sharing-500: #10b981; /* Minty Green */
+  --color-sharing-600: #059669;
+  --color-sharing-700: #047857;
+
+  --color-neutral-cream: #fafaf7;
+  --color-neutral-charcoal: #1e1e1e;
+  --color-neutral-slate: #f1f3f6;
+  
+  /* Animations */
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-brand-50);
+  font-family: var(--font-sans);
+  color: #2d2d2d;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-slate);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet Map Custom Layout Styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 1;
+  font-family: var(--font-sans);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  padding: 4px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
